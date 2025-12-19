@@ -17,6 +17,20 @@ const App: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (isLoaded) {
+      const hash = window.location.hash;
+      if (hash) {
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }
+  }, [isLoaded]);
+
   return (
     <div className="relative min-h-screen font-sans-montserrat selection:bg-[#d4af37]/30">
       <CustomCursor />
@@ -45,11 +59,11 @@ const App: React.FC = () => {
 
       {isLoaded && (
         <main className="bg-[#Fdfbf7]">
-          <Hero />
-          <History />
-          <Program />
-          <Location />
-          <RSVPForm />
+          <Hero id="hero" />
+          <History id="history" />
+          <Program id="program" />
+          <Location id="location" />
+          <RSVPForm id="rsvp" />
           
           <footer className="py-20 text-center bg-[#Fdfbf7] border-t border-[#1a1a1a]/5">
             <p className="font-serif-cormorant italic text-xl text-[#1a1a1a]/60">

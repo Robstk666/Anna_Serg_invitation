@@ -2,9 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Location: React.FC = () => {
+interface LocationProps {
+  id?: string;
+}
+
+const Location: React.FC<LocationProps> = ({ id }) => {
   return (
-    <section className="py-32 px-6 bg-[#Fdfbf7] border-t border-[#1a1a1a]/5 overflow-hidden">
+    <section id={id} className="py-32 px-6 bg-[#Fdfbf7] border-t border-[#1a1a1a]/5 overflow-hidden">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

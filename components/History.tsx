@@ -2,9 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const History: React.FC = () => {
+interface HistoryProps {
+  id?: string;
+}
+
+const History: React.FC<HistoryProps> = ({ id }) => {
   return (
-    <section className="py-32 px-6 md:px-20 lg:px-40 bg-[#Fdfbf7] flex flex-col md:flex-row items-center gap-16 md:gap-24 overflow-hidden">
+    <section id={id} className="py-32 px-6 md:px-20 lg:px-40 bg-[#Fdfbf7] flex flex-col md:flex-row items-center gap-16 md:gap-24 overflow-hidden">
       <div className="w-full md:w-1/2">
         <motion.div
           initial={{ opacity: 0, x: -50 }}

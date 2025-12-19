@@ -9,7 +9,11 @@ const timelineEvents = [
   { time: '22:00', title: 'Вечеринка и торт', desc: 'Танцы под звездами и праздничный десерт' },
 ];
 
-const Program: React.FC = () => {
+interface ProgramProps {
+  id?: string;
+}
+
+const Program: React.FC<ProgramProps> = ({ id }) => {
   const containerRef = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -23,7 +27,7 @@ const Program: React.FC = () => {
   });
 
   return (
-    <section ref={containerRef} className="py-32 px-6 bg-[#1a1a1a] text-[#Fdfbf7] relative overflow-hidden">
+    <section id={id} ref={containerRef} className="py-32 px-6 bg-[#1a1a1a] text-[#Fdfbf7] relative overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-24">
           <motion.h2 

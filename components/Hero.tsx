@@ -2,9 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  id?: string;
+}
+
+const Hero: React.FC<HeroProps> = ({ id }) => {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section id={id} className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Layer: Animated Gradient & Subtle "Texture" Video Simulation */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[#Fdfbf7] opacity-20 z-10"></div>

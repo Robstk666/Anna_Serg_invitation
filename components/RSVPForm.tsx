@@ -8,7 +8,11 @@ interface GuestPreference {
   alcohol: string;
 }
 
-const RSVPForm: React.FC = () => {
+interface RSVPFormProps {
+  id?: string;
+}
+
+const RSVPForm: React.FC<RSVPFormProps> = ({ id }) => {
   const [guestCount, setGuestCount] = useState<number>(1);
   const [attending, setAttending] = useState<'yes' | 'no'>('yes');
   const [guestPreferences, setGuestPreferences] = useState<GuestPreference[]>([
@@ -43,7 +47,7 @@ const RSVPForm: React.FC = () => {
 
   if (submitted) {
     return (
-      <section className="py-32 px-6 bg-[#Fdfbf7] flex items-center justify-center min-h-[600px]">
+      <section id={id} className="py-32 px-6 bg-[#Fdfbf7] flex items-center justify-center min-h-[600px]">
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -64,7 +68,7 @@ const RSVPForm: React.FC = () => {
   }
 
   return (
-    <section className="py-32 px-6 md:px-20 lg:px-40 bg-[#Fdfbf7]">
+    <section id={id} className="py-32 px-6 md:px-20 lg:px-40 bg-[#Fdfbf7]">
       <div className="max-w-2xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
