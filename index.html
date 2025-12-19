@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Анна & Сергей — 15.07.2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Montserrat:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #Fdfbf7;
+        color: #1a1a1a;
+        margin: 0;
+        overflow-x: hidden;
+        cursor: none;
+      }
+      .font-serif-cormorant { font-family: 'Cormorant Garamond', serif; }
+      .font-serif-playfair { font-family: 'Playfair Display', serif; }
+      .font-sans-montserrat { font-family: 'Montserrat', sans-serif; }
+      
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #Fdfbf7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4af37;
+      }
+
+      /* Liquid cursor helper */
+      .cursor-blob {
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        background: rgba(212, 175, 55, 0.4);
+        border-radius: 50%;
+        z-index: 9999;
+        mix-blend-mode: multiply;
+        transition: transform 0.1s ease-out;
+      }
+      .cursor-dot {
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        background: #d4af37;
+        border-radius: 50%;
+        z-index: 10000;
+        transition: transform 0.05s ease-out;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
